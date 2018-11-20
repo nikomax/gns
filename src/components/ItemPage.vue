@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import data from '../data/test';
+    import data from '../data/test'
 
     export default {
         name: 'ItemPage',

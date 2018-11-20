@@ -1,6 +1,6 @@
 <template>
     <div class="search">
-        <input type="text" v-model="searchValue">
+        <input type="text" @input="updateValue">
         <div>{{searchValue}}</div>
     </div>
 </template>
@@ -11,6 +11,12 @@
         data() {
             return {
                 searchValue: ''
+            }
+        },
+        methods: {
+            updateValue (e) {
+                this.$emit('handleInput', e.target.value)
+                this.searchValue = e.target.value
             }
         }
     }

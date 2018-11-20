@@ -1,7 +1,7 @@
 <template>
   <div class="block">
+    <Search/>
     <table>
-      <Search/>
       <SortNav/>
       <TableItem  v-for="item in data"
                   :key="item.id"

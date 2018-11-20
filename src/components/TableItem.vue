@@ -3,6 +3,7 @@
             <td><a href="javascript:void(0)" @click="openItemPage(data.id)">{{data.name}}</a></td>
             <td>{{data.location}}</td>
             <td>{{data.currency}}</td>
+            <td><a href="javascript:void(0)">edit</a></td>
         </tr>
 </template>
 
@@ -26,7 +27,6 @@
     }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 
 </style>

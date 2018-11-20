@@ -1,8 +1,8 @@
 <template>
-    <div class="block">
+    <div class="main">
         <Search @handleInput="handleValue"/>
         <table>
-            <div>Итого: {{currencySumm}}</div>
+            <p>Итого: {{currencySumm}}</p>
             <SortNav/>
             <TableItem v-for="item in sortList"
                        :key="item.id"
@@ -17,7 +17,6 @@
     import SortNav from "./SortNav"
     import Search from "./Search"
     import {mapState} from 'vuex'
-
     export default {
         name: 'Table',
         components: {Search, SortNav, TableItem},
@@ -92,6 +91,12 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style lang="sass">
+.main
+    display: flex
+    flex-direction: column
+    align-items: center
 
+td
+    border: 1px solid #333
 </style>

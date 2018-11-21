@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import data from '../data/test'
+    import {mapState} from 'vuex'
 
     export default {
         name: 'ItemPage',
@@ -21,13 +21,18 @@
         },
         methods: {
             createPage() {
-                this.itemData = data.find(item => {
+                this.itemData = this.list.find(item => {
                     if (item.id === this.itemId) {
                         return true
                     }
                     return false
                 })
             }
+        },
+        computed: {
+            ...mapState({
+                list: 'list'
+            })
         },
         mounted() {
             this.createPage()

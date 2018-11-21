@@ -46,5 +46,4 @@
 a.is-active
     color: red
     text-decoration: none
-
 </style>
